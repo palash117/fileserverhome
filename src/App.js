@@ -9,8 +9,8 @@ function App() {
   return (
     <Provider store={store}>
       <div className="ui container">
-      <Header></Header>
       <Router>
+      <Header></Header>
           <Switch>
             <Route
             path="/:id"

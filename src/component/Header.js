@@ -11,7 +11,8 @@ const Header = (props) => {
         <Link to="/">
       <div className="header item" >
         <i className="cloud upload icon"></i>FILE SERVER
-      </div></Link>
+      </div>
+      </Link>
       <div class="right menu">
         <div class="item">
           {healthy ? (
