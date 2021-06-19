@@ -1,11 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
 import { Provider } from 'react-redux';
 import store from './Store';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
-import { Fragment } from 'react';
 import FolderView from './component/FolderView';
-import { Header } from './component/Header';
+import Header from './component/Header';
 
 function App() {
   return (

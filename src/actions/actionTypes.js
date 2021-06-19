@@ -1,4 +1,6 @@
 const SET_FILES="SET_FILES"
+const SET_HEALTH="SET_HEALTH"
 export {
-    SET_FILES
+    SET_FILES,
+    SET_HEALTH
 }
