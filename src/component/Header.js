@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 import { checkHealth } from "../actions/healthCheck";
 
 const Header = (props) => {
@@ -7,9 +8,10 @@ const Header = (props) => {
   console.log("healthy is ", healthy);
   return (
     <div className="ui inverted menu">
-      <div className="header item">
+        <Link to="/">
+      <div className="header item" >
         <i className="cloud upload icon"></i>FILE SERVER
-      </div>
+      </div></Link>
       <div class="right menu">
         <div class="item">
           {healthy ? (
