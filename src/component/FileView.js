@@ -50,7 +50,7 @@ const FileView = (props) => {
       </div>
       <div class="extra content ">
         {IsDir ? (
-          <Link to={"/" + Id}>
+          <Link to={"/?id=" + Id}>
             {/* <button class="ui button" onClick={openFile}> */}
             <i class="folder icon open big" onClick={openFile}></i>
             {/* </button> */}

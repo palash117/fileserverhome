@@ -2,14 +2,17 @@ import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { getFiles } from "../actions/files";
 import FileView from "./FileView";
+import queryString from 'query-string'
 
 const FolderView = (props) => {
+    const value=queryString.parse(props.location.search);
+const id=value.id;
+console.log('token',id)//123
   let {
     getFiles,
     fileItems,
-    match: { params },
   } = props;
-  let id = params.id;
+//   let id = params.id;
   let refreshPage = () => {
     if (id) {
       getFiles(id);
