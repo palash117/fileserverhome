@@ -3,6 +3,8 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { getFiles } from "../actions/files";
 
+const FILESERVER_IP=process.env.REACT_APP_FILESERVER_IP
+
 const FileView = (props) => {
   let { file, getFiles ,openDeleteModal} = props;
   if (!file) {
@@ -18,7 +20,7 @@ const FileView = (props) => {
   };
   let downloadFile = () => {
     let link = document.createElement("a");
-    link.href = "http://192.168.1.27:9010/fs/downloadFileById?id=" + Id;
+    link.href = `http://${FILESERVER_IP}:9010/fs/downloadFileById?id=${Id}`;
     link.target = "_blank";
     link.download = FileName;
     link.click();
@@ -56,7 +58,7 @@ const FileView = (props) => {
             {/* </button> */}
           </Link>
         ) : (
-          <a href={"http://192.168.1.27:9010/fs/downloadFileById?id=" + Id}>
+          <a href={`http://${FILESERVER_IP}:9010/fs/downloadFileById?id=${Id}`}>
             <i class="cloud download icon big"></i>
           </a>
         )}
