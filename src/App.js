@@ -13,7 +13,7 @@ function App() {
       <Router>
       <Header></Header>
           <Switch>
-            <Route path="/cast"
+            <Route path="/:cast"
             component={MagicastView}
             />
             <Route path="/test"
