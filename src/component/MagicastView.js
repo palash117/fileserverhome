@@ -2,7 +2,7 @@ import React from 'react'
 import QRCode from "react-qr-code";
 
 const MagicastView = () => {
-    // console.log("magicast ip is", process.env.MAGICAST_IP)
+    // console.log("magicast ip is", process.env.REACT_APP_MAGICAST_IP)
     return (
         <div style={{
             width: "100%",
@@ -14,7 +14,7 @@ const MagicastView = () => {
         }}>
         <QRCode value={`http://192.168.1.22`} />
 
-           {/* <QRCode value={`http://${process.env.MAGICAST_IP}`} /> */}
+           {/* <QRCode value={`http://${process.env.REACT_APP_MAGICAST_IP}`} /> */}
         </div>
     )
 }

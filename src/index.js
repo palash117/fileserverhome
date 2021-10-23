@@ -6,9 +6,12 @@ import reportWebVitals from './reportWebVitals';
 import axios from 'axios'
 import startHealthCheckWorker from './util/healthCheckWorker';
 // import star from './util/healthCheckWorker'
-
-axios.defaults.baseURL = "http://"+process.env.REACT_APP_FILESERVER_IP 
-console.log("base url is ",process.env.REACT_APP_FILESERVER_IP )
+// REACT_APP_FILESERVER_PORT
+let baseUrl = "http://"+process.env.REACT_APP_FILESERVER_IP+":"+process.env.REACT_APP_FILESERVER_PORT;
+console.log("base url is ", baseUrl)
+console.log("process env is ", process.env)
+axios.defaults.baseURL = baseUrl
+// console.log("base url is ",process.env.REACT_APP_FILESERVER_IP )
 //"http://192.168.1.27:9010"
 startHealthCheckWorker()
 ReactDOM.render(
