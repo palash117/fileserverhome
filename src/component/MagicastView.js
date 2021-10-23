@@ -11,7 +11,7 @@ const MagicastView = () => {
             justifyContent:"center",
             alignItems:"center"
         }}>
-           <QRCode value="http://192.168.1.22" />
+           <QRCode value={`http://${process.env.REACT_APP_FILESERVER_IP}`} />
         </div>
     )
 }
