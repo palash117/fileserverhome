@@ -16,6 +16,9 @@ function App() {
             <Route path="/cast"
             component={MagicastView}
             />
+            <Route path="/test"
+            component={FolderView}
+            />
             <Route
             path="/:id"
             component ={FolderView}
