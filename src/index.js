@@ -7,7 +7,8 @@ import axios from 'axios'
 import startHealthCheckWorker from './util/healthCheckWorker';
 // import star from './util/healthCheckWorker'
 
-axios.defaults.baseURL = process.env.REACT_APP_FILESERVER_IP 
+axios.defaults.baseURL = "http://"+process.env.REACT_APP_FILESERVER_IP 
+console.log("base url is ",process.env.REACT_APP_FILESERVER_IP )
 //"http://192.168.1.27:9010"
 startHealthCheckWorker()
 ReactDOM.render(
